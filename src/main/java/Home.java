@@ -81,7 +81,7 @@ public class Home extends SetUpDriver{
 			prodInfo = prodInfo.substring(0,10);
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).click();
-			sleep(5);
+			sleep(6);
 			Assert.assertTrue("Unexpected title",driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText().contains(prodInfo));
 			
 		}
@@ -92,7 +92,7 @@ public class Home extends SetUpDriver{
 			prodInfo = prodInfo.substring(0,10);
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[2]")).click();
-			sleep(5);
+			sleep(6);
 			Assert.assertTrue("Unexpected title", driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText().contains(prodInfo));
 			
 			
@@ -101,10 +101,11 @@ public class Home extends SetUpDriver{
 		public void ImageMoreInfo(){
 			
 			String prodInfo = driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).getAttribute("title");
+			prodInfo = prodInfo.substring(0,10);
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[3]")).click();
-			sleep(5);
-			Assert.assertEquals(prodInfo,driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText());
+			sleep(6);
+			Assert.assertTrue("Unexpected title",driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText().contains(prodInfo));
 			
 			
 		}
