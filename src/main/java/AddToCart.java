@@ -29,7 +29,7 @@ public class AddToCart extends SetUpDriver{
 //		System.out.println("Selected Product Title"+ Prodtitle);
 
 		driver.findElement(By.className("wpsc_buy_button")).click();
-		sleep(2);
+		sleep(5);
 		String actualProdTitle = driver.findElement(By.xpath("//*[@id='fancy_notification_content']/span")).getText();
 //		System.out.println("Actual Product Title"+actualProdTitle);
 
@@ -42,10 +42,10 @@ public class AddToCart extends SetUpDriver{
 	public void GoToChekOut(){
 		driver.findElement(By.cssSelector(".slide")).click();
 		  driver.findElement(By.className("wpsc_buy_button")).click();
-		  sleep(2);
+		  sleep(5);
 		  driver.findElement(By.xpath("//*[@id='fancy_notification_content']/a[1]")).click();
 		  
-		  sleep(2);
+		  sleep(5);
 		  
 		  Assert.assertTrue("Error the checkout button does not work!", driver.getTitle().contains("Checkout"));
 		  
@@ -59,10 +59,10 @@ public class AddToCart extends SetUpDriver{
 		  
 		  String selectedProdName = driver.findElement(By.className("prodtitle")).getText();
 		  driver.findElement(By.className("wpsc_buy_button")).click();
-		  sleep(2);
+		  sleep(5);
 		  
 		  driver.findElement(By.xpath("//*[@id='fancy_notification_content']/a[2]")).click();
-		  sleep(2);
+		  sleep(5);
 		  
 		  Assert.assertTrue("Error the Continue Shopping button does not work!", driver.getTitle().contains(selectedProdName));
 		  

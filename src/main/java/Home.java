@@ -80,7 +80,7 @@ public class Home extends SetUpDriver{
 			String prodInfo = driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).getAttribute("title");
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).click();
-			sleep(2);
+			sleep(5);
 			Assert.assertEquals(prodInfo,driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText());
 			
 		}
@@ -90,7 +90,7 @@ public class Home extends SetUpDriver{
 			String prodInfo = driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).getAttribute("title");
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[2]")).click();
-			sleep(2);
+			sleep(5);
 			Assert.assertEquals(prodInfo,driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText());
 			
 			
@@ -101,7 +101,7 @@ public class Home extends SetUpDriver{
 			String prodInfo = driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[1]")).getAttribute("title");
 			System.out.println("String prodInfo = " + prodInfo);
 			driver.findElement(By.xpath("//*[@id='footer']/section[2]/ul/li[1]/a[3]")).click();
-			sleep(2);
+			sleep(5);
 			Assert.assertEquals(prodInfo,driver.findElement(By.xpath("//*[@id='single_product_page_container']/div[1]/div[2]/h1")).getText());
 			
 			
